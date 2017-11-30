@@ -12,7 +12,7 @@ Adds syntax highlighting to code blocks in markdown files using [Atom highlights
 
 ## How to use
 
-```json
+```js
 // In your gatsby-config.js
 plugins: [
   {
