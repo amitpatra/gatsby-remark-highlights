@@ -7,8 +7,28 @@
   "license": "MIT",
   "private": false,
   "repository": "git@github.com:amitpatra/gatsby-remark-highlights.git",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "highlight",
+    "atom",
+    "atom highlights",
+    "remark"
+  ],
   "dependencies": {
     "highlights": "^3.1.1",
     "unist-util-visit": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "cross-env": "^5.1.1",
+    "jest": "^21.2.1",
+    "remark": "^8.0.0"
+  },
+  "scripts": {
+    "test": "jest .",
+    "build": "babel src --out-dir . --ignore __tests__",
+    "watch": "babel -w src --out-dir . --ignore __tests__",
+    "prepublish": "cross-env NODE_ENV=production npm run build"
   }
 }

@@ -4,12 +4,11 @@ const Highlights = require('highlights');
 const highlighter = new Highlights();
 
 // Highlighing function
-const highlight = (contents, lang) => {
-	return highlighter.highlightSync({
+const highlight = (contents, lang) =>
+	highlighter.highlightSync({
 		fileContents: contents,
 		filePath: `fake.${lang}`
 	});
-};
 
 module.exports = ({ markdownAST }) => {
 	visit(markdownAST, `code`, node => {
