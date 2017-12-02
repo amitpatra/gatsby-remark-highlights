@@ -1,20 +1,13 @@
 {
   "name": "gatsby-remark-highlights",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Adds syntax highlighting to code blocks at build time using Atom Highlights",
   "main": "index.js",
   "author": "Amit Patra <amit.patra@msn.com>",
   "license": "MIT",
   "private": false,
   "repository": "git@github.com:amitpatra/gatsby-remark-highlights.git",
-  "keywords": [
-    "gatsby",
-    "gatsby-plugin",
-    "highlight",
-    "atom",
-    "atom highlights",
-    "remark"
-  ],
+  "keywords": ["gatsby", "gatsby-plugin", "highlight", "atom", "atom highlights", "remark"],
   "dependencies": {
     "highlights": "^3.1.1",
     "lodash": "^4.17.4",
