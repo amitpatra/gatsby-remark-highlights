@@ -38,8 +38,6 @@ const scopeNameFromLang = (highlighter, lang, additionalLangs) => {
 
 	var name = `source.${lang}`;
 
-	console.log(name);
-
 	return name;
 };
 
