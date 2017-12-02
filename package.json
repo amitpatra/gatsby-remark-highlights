@@ -7,9 +7,17 @@
   "license": "MIT",
   "private": false,
   "repository": "git@github.com:amitpatra/gatsby-remark-highlights.git",
-  "keywords": ["gatsby", "gatsby-plugin", "highlight", "atom", "atom highlights", "remark"],
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "highlight",
+    "atom",
+    "atom highlights",
+    "remark"
+  ],
   "dependencies": {
     "highlights": "^3.1.1",
+    "lodash": "^4.17.4",
     "unist-util-visit": "^1.2.0"
   },
   "devDependencies": {
