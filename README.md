@@ -1,5 +1,5 @@
 # gatsby-remark-highlights
-=========
+---
 
 [![Build Status](https://travis-ci.org/amitpatra/gatsby-remark-highlights.svg?branch=master)](https://travis-ci.org/amitpatra/gatsby-remark-highlights)
 
@@ -21,6 +21,13 @@ plugins: [
       plugins: [
         {
           resolve: `gatsby-remark-highlights`,
+          options: {
+              // Additional languages, no need to add it 
+              // if you don't wish to use additional languages
+              additionalLangs: [`language-rust`],
+              // scope prefix to use, defaults to ''
+              scopePrefix: 'syntax--'
+            }
         },
       ],
     },
@@ -28,12 +35,25 @@ plugins: [
 ]
 ```
 
+To use additional languages, you have to install them via `npm`
+e.g to use Rust install `language-rust` package
+
+`npm install language-rust`
+
+It supports any language that is supported by Atom.
+For language packages, please visit [Atom packages][atom-packages]
+
+## Include CSS
+
+To use this plugin you have to use a Atom theme. Atom themes are *less* files so you have to compile them. Rename `atom-text-editor` to `editor` and remove every instance of `syntax--` (optional; if you don't want to do that just set the scopePrefix to `syntax--`)  in the theme files.
+
 ## Release History
 
 * 1.0.0 Initial release
-
+* 1.1.0 Support for additional languages and scope prefix added
 
 
 
 
 [atom-highlights]: https://github.com/atom/highlights
+[atom-packages]: https://atom.io/packages/
