@@ -2,13 +2,6 @@ const visit = require(`unist-util-visit`);
 const Highlights = require(`highlights`);
 var _ = require(`lodash`);
 
-// Highlighing function
-const highlight = (highlighter, contents, lang, additionalLangs) =>
-	highlighter.highlightSync({
-		fileContents: contents,
-		scopeName: scopeNameFromLang(highlighter, lang, additionalLangs)
-	});
-
 const scopeNameFromLang = (highlighter, lang, additionalLangs) => {
 	lang = lang.toLowerCase();
 
@@ -52,7 +45,10 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 	const highlighter = new Highlights({ scopePrefix });
 
 	visit(markdownAST, `code`, node => {
+		const fileContents = node.value;
+		const scopeName = scopeNameFromLang(highlighter, node.lang, additionalLangs);
+
 		node.type = `html`;
-		node.value = highlight(highlighter, node.value, node.lang, additionalLangs);
+		node.value = highlighter.highlightSync({ fileContents, scopeName });
 	});
 };
