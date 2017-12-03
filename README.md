@@ -1,5 +1,5 @@
 # gatsby-remark-highlights
----
+
 
 [![Build Status](https://travis-ci.org/amitpatra/gatsby-remark-highlights.svg?branch=master)](https://travis-ci.org/amitpatra/gatsby-remark-highlights)
 

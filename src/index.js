@@ -1,6 +1,6 @@
 const visit = require(`unist-util-visit`);
 const Highlights = require(`highlights`);
-var _ = require(`lodash`);
+const _ = require(`lodash`);
 
 const scopeNameFromLang = (highlighter, lang, additionalLangs) => {
 	lang = lang.toLowerCase();
@@ -18,7 +18,7 @@ const scopeNameFromLang = (highlighter, lang, additionalLangs) => {
 		highlighter.loadGrammarsSync();
 	}
 
-	var grammar = _.pickBy(
+	const grammar = _.pickBy(
 		highlighter.registry.grammarsByScopeName,
 		(val, key) =>
 			val.name.toLowerCase() === lang ||
@@ -29,7 +29,7 @@ const scopeNameFromLang = (highlighter, lang, additionalLangs) => {
 		return Object.keys(grammar)[0];
 	}
 
-	var name = `source.${lang}`;
+	const name = `source.${lang}`;
 
 	return name;
 };
