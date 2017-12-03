@@ -46,7 +46,8 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 
 	visit(markdownAST, `code`, node => {
 		const fileContents = node.value;
-		const scopeName = scopeNameFromLang(highlighter, node.lang, additionalLangs);
+		const scopeName =
+			(node.lang && scopeNameFromLang(highlighter, node.lang, additionalLangs)) || '';
 
 		node.type = `html`;
 		node.value = highlighter.highlightSync({ fileContents, scopeName });

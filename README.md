@@ -49,6 +49,8 @@ To use this plugin you have to use a Atom theme. Atom themes are *less* files so
 
 ## Release History
 
+* 1.1.4 Bug fix, highlight when no lang is provided
+* 1.1.3 Remove highlight function
 * 1.1.2 Remove console.log
 * 1.1.1 Add lodash dependency(Bug fix)
 * 1.1.0 Support for additional languages and scope prefix added

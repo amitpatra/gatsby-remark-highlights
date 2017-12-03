@@ -8,4 +8,11 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`does not blast off when no lang is provided`, () => {
+		const code = `\`\`\`\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });
