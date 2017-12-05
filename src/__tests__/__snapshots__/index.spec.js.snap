@@ -81,3 +81,126 @@ Object {
   "type": "root",
 }
 `;
+
+exports[`remark atom highlights plugin highlight code when filename name is provided 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "test.js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 33,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 33,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin highlight code when language name is provided 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "javascript",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 36,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 36,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin highlight codes from addition langs 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 28,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 28,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;

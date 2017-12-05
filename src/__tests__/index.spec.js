@@ -15,4 +15,25 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`highlight code when language name is provided`, () => {
+		const code = `\`\`\`javascript\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`highlight code when filename name is provided`, () => {
+		const code = `\`\`\`test.js\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`highlight codes from addition langs`, () => {
+		const code = `\`\`\`rs\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { additionalLangs: [`language-rust`] });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });

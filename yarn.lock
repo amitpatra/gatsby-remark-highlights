@@ -1755,6 +1755,10 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+language-rust@^0.4.12:
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/language-rust/-/language-rust-0.4.12.tgz#fc00b07aed22bf5160e15fbe289960a252da47e3"
+
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
