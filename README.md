@@ -26,7 +26,10 @@ plugins: [
               // if you don't wish to use additional languages
               additionalLangs: [`language-rust`],
               // scope prefix to use, defaults to ''
-              scopePrefix: 'syntax--'
+              scopePrefix: 'syntax--',
+              codeWrap: {
+                className: 'midnight'
+              }
             }
         },
       ],
@@ -49,6 +52,8 @@ To use this plugin you have to use a Atom theme. Atom themes are *less* files so
 
 ## Release History
 
+* 1.2.0 Implement code wrapping
+* 1.1.5 Code reorganization
 * 1.1.4 Bug fix, highlight when no lang is provided
 * 1.1.3 Remove highlight function
 * 1.1.2 Remove console.log

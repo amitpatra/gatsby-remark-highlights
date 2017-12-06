@@ -36,4 +36,18 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST }, { additionalLangs: [`language-rust`] });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`has codewraps when codewrapping is enabled`, () => {
+		const code = `\`\`\`js\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { codeWrap: true });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`has codewraps with specific class when codewrapping is enabled`, () => {
+		const code = `\`\`\`js\n// Atom Highlights\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { codeWrap: { className: 'midnight' } });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });

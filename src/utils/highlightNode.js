@@ -8,11 +8,10 @@ module.exports = (highlighter, lang, fileContents) => {
 			fileContents,
 			scopeName
 		});
-	} else {
-		// Ok it is a file extension or a file
-		return highlighter.highlightSync({
-			fileContents,
-			filePath: `fake_file_.${lang}`
-		});
 	}
+	// Ok it is a file extension or a file
+	return highlighter.highlightSync({
+		fileContents,
+		filePath: `fake_file_.${lang}`
+	});
 };
