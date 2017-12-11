@@ -286,3 +286,44 @@ Object {
   "type": "root",
 }
 `;
+
+exports[`remark atom highlights plugin highlight codes from addition langs when it provided along its name 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs{language: language-rust}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 52,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 52,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
