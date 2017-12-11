@@ -52,7 +52,7 @@ describe(`remark atom highlights plugin`, () => {
 	});
 
 	it(`highlight codes from addition langs when it provided along its name`, () => {
-		const code = `\`\`\`rs{language: language-rust}\n// Atom Highlight\n\`\`\``;
+		const code = `\`\`\`rs{languagePackage: language-rust}\n// Atom Highlight\n\`\`\``;
 		const markdownAST = remark.parse(code);
 		plugin({ markdownAST });
 		expect(markdownAST).toMatchSnapshot();
