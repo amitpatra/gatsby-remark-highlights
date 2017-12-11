@@ -19,10 +19,28 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 
 	const highlighter = new Highlights({ scopePrefix });
 
-	loadGrammars(highlighter, additionalLangs);
-
 	visit(markdownAST, `code`, node => {
-		const highlightedNode = highlightNode(highlighter, node.lang, node.value);
+		const config = {};
+
+		let lang = node.lang;
+
+		if (!!lang && lang.split(`{`).length > 1) {
+			const splitedLang = lang.split(`{`);
+			const configStr = splitedLang[1].slice(0, -1);
+			configStr
+				.split(',')
+				.map(a => a.trim())
+				.map(a => a.split(':'))
+				.forEach(a => (config[a[0]] = a[1].trim()));
+
+			lang = splitedLang[0];
+		}
+
+		const langs = !!config.language ? config.language : additionalLangs;
+
+		loadGrammars(highlighter, langs);
+
+		const highlightedNode = highlightNode(highlighter, lang, node.value);
 		const wrappedNode = wrapNode(highlightedNode, codeWrap);
 
 		node.type = `html`;

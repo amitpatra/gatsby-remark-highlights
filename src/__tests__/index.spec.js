@@ -50,4 +50,11 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST }, { codeWrap: { className: 'midnight' } });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`highlight codes from addition langs when it provided along its name`, () => {
+		const code = `\`\`\`rs{language: language-rust}\n// Atom Highlight\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });
