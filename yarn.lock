@@ -1755,6 +1755,10 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+language-hugo@mattstratton/language-hugo:
+  version "0.4.0"
+  resolved "https://codeload.github.com/mattstratton/language-hugo/tar.gz/769bb05928b9c8a9736a44e77008bf0e033fccd0"
+
 language-rust@^0.4.12:
   version "0.4.12"
   resolved "https://registry.yarnpkg.com/language-rust/-/language-rust-0.4.12.tgz#fc00b07aed22bf5160e15fbe289960a252da47e3"

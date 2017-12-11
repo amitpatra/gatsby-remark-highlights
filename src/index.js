@@ -36,11 +36,13 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 			lang = splitedLang[0];
 		}
 
+		config.lang = lang;
+
 		const langs = !!config.languagePackage ? config.languagePackage : additionalLangs;
 
 		loadGrammars(highlighter, langs);
 
-		const highlightedNode = highlightNode(highlighter, lang, node.value);
+		const highlightedNode = highlightNode(highlighter, config, node.value);
 		const wrappedNode = wrapNode(highlightedNode, codeWrap);
 
 		node.type = `html`;
