@@ -291,12 +291,12 @@ exports[`remark atom highlights plugin highlight codes from addition langs when 
 Object {
   "children": Array [
     Object {
-      "lang": "rs{language: language-rust}",
+      "lang": "rs{languagePackage: language-rust}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 52,
+          "offset": 59,
         },
         "indent": Array [
           1,
@@ -316,7 +316,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 52,
+      "offset": 59,
     },
     "start": Object {
       "column": 1,

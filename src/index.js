@@ -36,7 +36,7 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 			lang = splitedLang[0];
 		}
 
-		const langs = !!config.language ? config.language : additionalLangs;
+		const langs = !!config.languagePackage ? config.languagePackage : additionalLangs;
 
 		loadGrammars(highlighter, langs);
 
