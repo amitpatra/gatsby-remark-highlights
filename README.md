@@ -1,5 +1,7 @@
 # gatsby-remark-highlights
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amitpatra/gatsby-remark-highlights.svg)](https://greenkeeper.io/)
+
 
 [![Build Status](https://travis-ci.org/amitpatra/gatsby-remark-highlights.svg?branch=master)](https://travis-ci.org/amitpatra/gatsby-remark-highlights)
 
