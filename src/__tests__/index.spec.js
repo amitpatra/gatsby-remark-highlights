@@ -71,4 +71,18 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`inline scopePrefix`, () => {
+		const code = `\`\`\`js{scopePrefix: source--}\n// Atom Highlight\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`override scopePrefix`, () => {
+		const code = `\`\`\`js{scopePrefix: }\n// Atom Highlight\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { scopePrefix: `source--` });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });
