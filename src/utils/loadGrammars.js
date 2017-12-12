@@ -1,4 +1,5 @@
-module.exports = (highlighter, langs) => {
+module.exports = (highlighter, config) => {
+	const langs = !!config.languagePackage ? config.languagePackage : config.additionalLangs;
 	if (typeof langs === 'string') {
 		highlighter.requireGrammarsSync({
 			modulePath: require.resolve(`${langs}/package.json`)

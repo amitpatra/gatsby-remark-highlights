@@ -2,7 +2,6 @@ const { defaults } = require(`lodash`);
 
 module.exports = (node, config) => {
 	let wrappedNode = node;
-	console.log('Bam', config);
 
 	const {
 		lang,
@@ -25,6 +24,7 @@ module.exports = (node, config) => {
 
 	if (!!codeWrap) {
 		//CodeWrap is enabled
+
 		const { className } = defaults(codeWrap, { className: `highlight` });
 
 		wrappedNode = `<div class='${className}'>${wrappedNode}</div>`;

@@ -17,15 +17,10 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 		wrapAll: false
 	};
 
-	const { additionalLangs, scopePrefix, codeWrap, showFileName } = defaults(
-		pluginOptions,
-		defaultPluginOptions
-	);
-
-	const highlighter = new Highlights({ scopePrefix });
+	const config = defaults(pluginOptions, defaultPluginOptions);
 
 	visit(markdownAST, `code`, node => {
-		const { _, __, ...config } = defaultPluginOptions;
+		const highlighter = new Highlights(({ scopePrefix } = config));
 
 		let lang = node.lang;
 
@@ -43,9 +38,7 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 
 		config.lang = lang;
 
-		const langs = !!config.languagePackage ? config.languagePackage : additionalLangs;
-
-		loadGrammars(highlighter, langs);
+		loadGrammars(highlighter, config);
 
 		const highlightedNode = highlightNode(highlighter, config, node.value);
 		const wrappedNode = wrapNode(highlightedNode, config);
