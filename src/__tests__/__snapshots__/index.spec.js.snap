@@ -291,12 +291,12 @@ exports[`remark atom highlights plugin highlight codes from addition langs when 
 Object {
   "children": Array [
     Object {
-      "lang": "rs{languagePackage: language-rust}",
+      "lang": "rs{languagePackage: \\"language-rust\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 59,
+          "offset": 61,
         },
         "indent": Array [
           1,
@@ -316,7 +316,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 59,
+      "offset": 61,
     },
     "start": Object {
       "column": 1,
@@ -332,12 +332,12 @@ exports[`remark atom highlights plugin highlight codes from scope when scope is 
 Object {
   "children": Array [
     Object {
-      "lang": "html{scopeName:source.hugo, languagePackage:language-hugo}",
+      "lang": "html{scopeName:\\"source.hugo\\", languagePackage:\\"language-hugo\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 16,
-          "offset": 246,
+          "offset": 250,
         },
         "indent": Array [
           1,
@@ -370,7 +370,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 16,
-      "offset": 246,
+      "offset": 250,
     },
     "start": Object {
       "column": 1,
@@ -386,12 +386,12 @@ exports[`remark atom highlights plugin highlight codes from scope when scope is 
 Object {
   "children": Array [
     Object {
-      "lang": "rs{scopeName: source.js}",
+      "lang": "rs{scopeName: \\"source.js\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 49,
+          "offset": 51,
         },
         "indent": Array [
           1,
@@ -411,7 +411,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 49,
+      "offset": 51,
     },
     "start": Object {
       "column": 1,
@@ -427,12 +427,12 @@ exports[`remark atom highlights plugin highlight codes from scope when scope is 
 Object {
   "children": Array [
     Object {
-      "lang": "rs{languagePackage: language-rust}",
+      "lang": "rs{languagePackage: \\"language-rust\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 59,
+          "offset": 61,
         },
         "indent": Array [
           1,
@@ -452,7 +452,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 59,
+      "offset": 61,
     },
     "start": Object {
       "column": 1,
@@ -468,12 +468,12 @@ exports[`remark atom highlights plugin inline scopePrefix 1`] = `
 Object {
   "children": Array [
     Object {
-      "lang": "js{scopePrefix: source--}",
+      "lang": "js{scopePrefix: \\"source--\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 50,
+          "offset": 52,
         },
         "indent": Array [
           1,
@@ -493,7 +493,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 50,
+      "offset": 52,
     },
     "start": Object {
       "column": 1,
@@ -509,12 +509,12 @@ exports[`remark atom highlights plugin override scopePrefix 1`] = `
 Object {
   "children": Array [
     Object {
-      "lang": "js{scopePrefix: }",
+      "lang": "js{scopePrefix: \\"\\"}",
       "position": Position {
         "end": Object {
           "column": 4,
           "line": 3,
-          "offset": 42,
+          "offset": 44,
         },
         "indent": Array [
           1,
@@ -534,7 +534,7 @@ Object {
     "end": Object {
       "column": 4,
       "line": 3,
-      "offset": 42,
+      "offset": 44,
     },
     "start": Object {
       "column": 1,
