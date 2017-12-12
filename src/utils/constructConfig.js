@@ -17,15 +17,7 @@ module.exports = (nodeLang, pluginOptions) => {
 
 	if (!!lang && lang.split(`{`).length > 1) {
 		const splitedLang = lang.split(`{`);
-		/*
-		const configStr = splitedLang[1].slice(0, -1);
-		
-		configStr
-			.split(',')
-			.map(a => a.trim())
-			.map(a => a.split(':'))
-			.forEach(a => (config[a[0]] = a[1].trim()));
-			*/
+
 		const configStr = splitedLang[1]
 			.slice(0, -1)
 			.replace(/\'|`/g, '"')
