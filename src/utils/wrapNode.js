@@ -3,23 +3,25 @@ const { defaults } = require(`lodash`);
 module.exports = (node, config) => {
 	let wrappedNode = node;
 
-	const {
-		lang,
-		codeWrap,
-		showFileName,
-		showFileIcon,
-		fileNameOutSideCodeWrap,
-		fileIconOutSideCodeWrap,
-		wrapAll
-	} = config;
+	const { lang, codeWrap, showFileName, showFileIcon, wrapAll } = config;
 
-	if (!!showFileName && !fileNameOutSideCodeWrap) {
-		//Show the file name inside the codewrap
-		wrappedNode = `<div class='highlighted-file-name ${lang}'>${lang}</div>${wrappedNode}`;
+	let fileNameInSideCodeWrap, fileIconInSideCodeWrap;
+	if (!!codeWrap && !!showFileName) {
+		// if showoFileName exits
+		fileNameInSideCodeWrap = showFileName.insideCodeWrap;
 	}
 
-	if (!!showFileIcon && !fileIconOutSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon ${lang}'></div>${wrappedNode}`;
+	if (!!codeWrap && !!showFileIcon) {
+		fileIconInSideCodeWrap = showFileIcon.insideCodeWrap;
+	}
+
+	if (!!showFileName && !!fileNameInSideCodeWrap) {
+		//Show the file name inside the codewrap
+		wrappedNode = `<div class='highlighted-file-name'>${lang}</div>${wrappedNode}`;
+	}
+
+	if (!!showFileIcon && !!fileIconInSideCodeWrap) {
+		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon'></div>${wrappedNode}`;
 	}
 
 	if (!!codeWrap) {
@@ -30,12 +32,12 @@ module.exports = (node, config) => {
 		wrappedNode = `<div class='${className}'>${wrappedNode}</div>`;
 	}
 
-	if (!!showFileName && !!fileNameOutSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-name ${lang}'>${lang}</div>${wrappedNode}`;
+	if (!!showFileName && !fileNameInSideCodeWrap) {
+		wrappedNode = `<div class='highlighted-file-name'>${lang}</div>${wrappedNode}`;
 	}
 
-	if (!!showFileIcon && !!fileIconOutSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon ${lang}'></div>${wrappedNode}`;
+	if (!!showFileIcon && !fileIconInSideCodeWrap) {
+		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon'></div>${wrappedNode}`;
 	}
 
 	if (!!wrapAll) {
