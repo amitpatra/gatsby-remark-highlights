@@ -1,4 +1,5 @@
 const { defaults } = require(`lodash`);
+const getIcon = require(`./getIcon`);
 
 module.exports = (node, config) => {
 	let wrappedNode = node;
@@ -21,7 +22,8 @@ module.exports = (node, config) => {
 	}
 
 	if (!!showFileIcon && !!fileIconInSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon'></div>${wrappedNode}`;
+		const fileIconArray = getIcon(lang);
+		wrappedNode = `<div class='highlighted-file-icon ${fileIconArray[0]}'></div>${wrappedNode}`;
 	}
 
 	if (!!codeWrap) {
@@ -37,7 +39,8 @@ module.exports = (node, config) => {
 	}
 
 	if (!!showFileIcon && !fileIconInSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-icon dummy-file-icon'></div>${wrappedNode}`;
+		const fileIconArray = getIcon(lang);
+		wrappedNode = `<div class='highlighted-file-icon ${fileIconArray[0]}'></div>${wrappedNode}`;
 	}
 
 	if (!!wrapAll) {

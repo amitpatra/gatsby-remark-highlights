@@ -2550,9 +2550,9 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-simple-string-to-json@amitpatra/simple-string-to-json:
+simple-string-to-json@^0.0.1:
   version "0.0.1"
-  resolved "https://codeload.github.com/amitpatra/simple-string-to-json/tar.gz/d44bee9cffbeb9fa3839434f087a122b603f3f69"
+  resolved "https://registry.yarnpkg.com/simple-string-to-json/-/simple-string-to-json-0.0.1.tgz#ea40f4faab7f1757807eb2c71770daa91f4107ff"
 
 slash@^1.0.0:
   version "1.0.0"

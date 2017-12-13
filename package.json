@@ -18,7 +18,7 @@
   "dependencies": {
     "highlights": "^3.1.1",
     "lodash": "^4.17.4",
-    "simple-string-to-json": "amitpatra/simple-string-to-json",
+    "simple-string-to-json": "^0.0.1",
     "unist-util-visit": "^1.2.0"
   },
   "devDependencies": {
