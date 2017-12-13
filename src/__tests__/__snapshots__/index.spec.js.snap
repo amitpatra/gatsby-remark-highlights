@@ -546,6 +546,129 @@ Object {
 }
 `;
 
+exports[`remark atom highlights plugin should replace pre class from config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should replace pre class from inlineconfig 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{ preClass: { removeClass: true } }",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 76,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 76,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should set custom pre class from config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"foo bar\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`remark atom highlights plugin should show fileicon 1`] = `
 Object {
   "children": Array [

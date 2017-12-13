@@ -10,6 +10,7 @@ module.exports = (nodeLang, pluginOptions) => {
 		codeWrap: false,
 		showFileName: false, // File name is actually lang
 		showFileIcon: false,
+		preClass: false,
 		wrapAll: false
 	};
 

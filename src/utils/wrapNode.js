@@ -4,7 +4,7 @@ const getIcon = require(`./getIcon`);
 module.exports = (node, config) => {
 	let wrappedNode = node;
 
-	const { lang, codeWrap, showFileName, showFileIcon, wrapAll } = config;
+	const { lang, codeWrap, showFileName, showFileIcon, wrapAll, preClass } = config;
 
 	let fileNameInSideCodeWrap, fileIconInSideCodeWrap;
 	if (!!codeWrap && !!showFileName) {
@@ -45,6 +45,17 @@ module.exports = (node, config) => {
 
 	if (!!wrapAll) {
 		wrappedNode = `<div class='highlight-wrapper'>${wrappedNode}</div>`;
+	}
+
+	if (!!preClass) {
+		if (!!preClass.removeClass || !!preClass.remove) {
+			wrappedNode = wrappedNode.replace(`pre class="editor editor-colors"`, `pre`);
+		} else if (!!preClass.className || !!preClass.class) {
+			wrappedNode = wrappedNode.replace(
+				`pre class="editor editor-colors"`,
+				`pre class="${preClass.className}"`
+			);
+		}
 	}
 
 	return wrappedNode;

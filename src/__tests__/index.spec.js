@@ -106,4 +106,25 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST }, { showFileIcon: true });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`should replace pre class from config`, () => {
+		const code = `\`\`\`js\n// Atom Highlight with fileName\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { preClass: { removeClass: true } });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`should replace pre class from inlineconfig`, () => {
+		const code = `\`\`\`js{ preClass: { removeClass: true } }\n// Atom Highlight with fileName\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
+
+	it(`should set custom pre class from config`, () => {
+		const code = `\`\`\`js\n// Atom Highlight with fileName\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST }, { preClass: { className: 'foo bar' } });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });
