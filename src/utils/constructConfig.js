@@ -1,5 +1,5 @@
 const { defaults } = require(`lodash`);
-const objectify = require(`./objectify`);
+const parseConfig = require(`simple-string-to-json`);
 
 module.exports = (nodeLang, pluginOptions) => {
 	let lang = nodeLang;
@@ -18,20 +18,9 @@ module.exports = (nodeLang, pluginOptions) => {
 	if (!!lang && lang.split(`{`).length > 1) {
 		const splitedLang = lang.split(`{`);
 
-		const configStr = splitedLang[1]
-			.slice(0, -1)
-			.replace(/\'|`/g, '"')
-			.split(',')
-			.map(a => a.split(':'))
-			.map(a => {
-				a[1] = objectify(a[1].trim());
-				a[0] = a[0].trim();
-				return [`"${a[0]}"`, a[1]];
-			})
-			.map(a => a.join(':'))
-			.join(',');
+		const inlineConfig = lang.substring(lang.indexOf('{'));
 
-		config = { ...config, ...JSON.parse(`{${configStr}}`) };
+		config = Object.assign(config, JSON.parse(parseConfig(inlineConfig)));
 
 		lang = splitedLang[0];
 	}
