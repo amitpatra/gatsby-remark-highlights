@@ -29,7 +29,7 @@ module.exports = (node, config) => {
 	if (!!codeWrap) {
 		//CodeWrap is enabled
 
-		const { className } = defaults(codeWrap, { className: `highlight` });
+		const { className } = defaults({}, codeWrap, { className: `highlight` });
 
 		wrappedNode = `<div class='${className}'>${wrappedNode}</div>`;
 	}
