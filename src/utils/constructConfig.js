@@ -14,7 +14,7 @@ module.exports = (node, pluginOptions) => {
 		wrapAll: false
 	};
 
-	let config = defaults(pluginOptions, defaultPluginOptions);
+	let config = defaults({}, pluginOptions, defaultPluginOptions);
 
 	if (!!lang && lang.split(`{`).length > 1) {
 		const rangeStr = lang.substring(lang.indexOf(`(`) + 1, lang.indexOf(`)`));
