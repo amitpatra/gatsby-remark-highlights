@@ -127,4 +127,11 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST }, { preClass: { className: 'foo bar' } });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`should highlight line numbers`, () => {
+		const code = `\`\`\`html{scopeName:"source.hugo", languagePackage:"language-hugo", highlightLines: (1-2, 5)}\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset="utf-8">\n<title>{{ block "title" . }}\n{{ .Site.Title }}\n{{ end }}\n</title>\n</head>\n<body>\n{{ block "main" . }}\n{{ end }}\n</body>\n</html>\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });

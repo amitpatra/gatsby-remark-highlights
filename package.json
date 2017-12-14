@@ -18,6 +18,7 @@
   "dependencies": {
     "highlights": "^3.1.1",
     "lodash": "^4.17.4",
+    "parse-numeric-range": "^0.0.2",
     "simple-string-to-json": "^0.0.1",
     "unist-util-visit": "^1.2.0"
   },

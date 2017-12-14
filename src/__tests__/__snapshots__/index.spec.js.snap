@@ -546,6 +546,60 @@ Object {
 }
 `;
 
+exports[`remark atom highlights plugin should highlight line numbers 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "html{scopeName:\\"source.hugo\\", languagePackage:\\"language-hugo\\", highlightLines: (1-2, 5)}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 16,
+          "offset": 276,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag sgml html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;!</span></span><span class=\\"meta tag sgml doctype html\\"><span>DOCTYPE</span><span>&nbsp;html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>meta</span></span><span>&nbsp;</span><span class=\\"entity other attribute-name html\\"><span>charset</span></span><span>=</span><span class=\\"string quoted double html\\"><span class=\\"punctuation definition string begin html\\"><span>&quot;</span></span><span>utf-8</span><span class=\\"punctuation definition string end html\\"><span>&quot;</span></span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>title</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.Site</span><span>.Title</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;/</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>main</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 16,
+      "offset": 276,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`remark atom highlights plugin should replace pre class from config 1`] = `
 Object {
   "children": Array [
