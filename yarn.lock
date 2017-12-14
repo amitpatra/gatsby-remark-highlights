@@ -1755,6 +1755,10 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
+language-hugo@mattstratton/language-hugo:
+  version "0.4.0"
+  resolved "https://codeload.github.com/mattstratton/language-hugo/tar.gz/769bb05928b9c8a9736a44e77008bf0e033fccd0"
+
 language-rust@^0.4.12:
   version "0.4.12"
   resolved "https://registry.yarnpkg.com/language-rust/-/language-rust-0.4.12.tgz#fc00b07aed22bf5160e15fbe289960a252da47e3"
@@ -2141,6 +2145,10 @@ parse-json@^2.2.0:
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   dependencies:
     error-ex "^1.2.0"
+
+parse-numeric-range@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
 
 parse5@^1.5.1:
   version "1.5.1"
@@ -2545,6 +2553,10 @@ shellwords@^0.1.0:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+simple-string-to-json@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/simple-string-to-json/-/simple-string-to-json-0.0.1.tgz#ea40f4faab7f1757807eb2c71770daa91f4107ff"
 
 slash@^1.0.0:
   version "1.0.0"

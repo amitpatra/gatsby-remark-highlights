@@ -286,3 +286,521 @@ Object {
   "type": "root",
 }
 `;
+
+exports[`remark atom highlights plugin highlight codes from addition langs when it provided along its name 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs{languagePackage: \\"language-rust\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 61,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 61,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin highlight codes from scope when scope is provided and languagePackage is provided 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "html{scopeName:\\"source.hugo\\", languagePackage:\\"language-hugo\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 16,
+          "offset": 250,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag sgml html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;!</span></span><span class=\\"meta tag sgml doctype html\\"><span>DOCTYPE</span><span>&nbsp;html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>meta</span></span><span>&nbsp;</span><span class=\\"entity other attribute-name html\\"><span>charset</span></span><span>=</span><span class=\\"string quoted double html\\"><span class=\\"punctuation definition string begin html\\"><span>&quot;</span></span><span>utf-8</span><span class=\\"punctuation definition string end html\\"><span>&quot;</span></span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>title</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.Site</span><span>.Title</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;/</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>main</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 16,
+      "offset": 250,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin highlight codes from scope when scope is provided; it would try to use js even if rs is provided 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs{scopeName: \\"source.js\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 51,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 51,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin highlight codes from scope when scope is provided; it would try to use js even if rs is provided 2`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs{languagePackage: \\"language-rust\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 61,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 61,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin inline scopePrefix 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{scopePrefix: \\"source--\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 52,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source--source source--js\\"><span class=\\"source--comment source--line source--double-slash source--js\\"><span class=\\"source--punctuation source--definition source--comment source--js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 52,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin override scopePrefix 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{scopePrefix: \\"\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 44,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 44,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should highlight line numbers 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "html{scopeName:\\"source.hugo\\", languagePackage:\\"language-hugo\\", highlightLines: (1-2, 5)}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 16,
+          "offset": 276,
+        },
+        "indent": Array [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag sgml html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;!</span></span><span class=\\"meta tag sgml doctype html\\"><span>DOCTYPE</span><span>&nbsp;html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>meta</span></span><span>&nbsp;</span><span class=\\"entity other attribute-name html\\"><span>charset</span></span><span>=</span><span class=\\"string quoted double html\\"><span class=\\"punctuation definition string begin html\\"><span>&quot;</span></span><span>utf-8</span><span class=\\"punctuation definition string end html\\"><span>&quot;</span></span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line highlighted-line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>title</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.Site</span><span>.Title</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag inline any html\\"><span class=\\"punctuation definition tag begin html\\"><span>&lt;/</span></span><span class=\\"entity name tag inline any html\\"><span>title</span></span><span class=\\"punctuation definition tag end html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>head</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;block&nbsp;</span><span class=\\"string quoted single hugo\\"><span>&quot;</span><span>main</span><span>&quot;</span></span><span>&nbsp;</span><span class=\\"variable hugo\\"><span>.</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"punctuation section embedded begin hugo\\"><span>{{</span></span><span>&nbsp;</span><span class=\\"keyword control hugo\\"><span>end</span></span><span>&nbsp;</span><span class=\\"punctuation section embedded end hugo\\"><span>}}</span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>body</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div><div class=\\"line\\"><span class=\\"source hugo\\"><span class=\\"meta tag structure any html\\"><span class=\\"punctuation definition tag html\\"><span>&lt;/</span></span><span class=\\"entity name tag structure any html\\"><span>html</span></span><span class=\\"punctuation definition tag html\\"><span>&gt;</span></span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 16,
+      "offset": 276,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should replace pre class from config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should replace pre class from inlineconfig 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{ preClass: { removeClass: true } }",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 76,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 76,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should set custom pre class from config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"foo bar\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should show fileicon 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<div class='highlighted-file-icon js-icon'></div><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin should show filename 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 41,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<div class='highlighted-file-name'>js</div><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 41,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;

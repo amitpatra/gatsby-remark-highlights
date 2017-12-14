@@ -1,31 +1,21 @@
 const visit = require(`unist-util-visit`);
 const Highlights = require(`highlights`);
-const { defaults } = require(`lodash`);
 const highlightNode = require(`./utils/highlightNode`);
 const loadGrammars = require(`./utils/loadGrammars`);
 const wrapNode = require(`./utils/wrapNode`);
+const constructConfig = require(`./utils/constructConfig`);
+const highlightLines = require(`./utils/highlightLines`);
 
 module.exports = ({ markdownAST }, pluginOptions) => {
-	const defaultPluginOptions = {
-		additionalLangs: null,
-		scopePrefix: null,
-		codeWrap: false
-	};
-
-	const { additionalLangs, scopePrefix, codeWrap } = defaults(
-		pluginOptions,
-		defaultPluginOptions
-	);
-
-	const highlighter = new Highlights({ scopePrefix });
-
-	loadGrammars(highlighter, additionalLangs);
-
 	visit(markdownAST, `code`, node => {
-		const highlightedNode = highlightNode(highlighter, node.lang, node.value);
-		const wrappedNode = wrapNode(highlightedNode, codeWrap);
+		const config = constructConfig(node, pluginOptions);
+
+		const highlighter = new Highlights(({ scopePrefix } = config));
 
 		node.type = `html`;
-		node.value = wrappedNode;
+		node.value = [loadGrammars, highlightNode, highlightLines, wrapNode].reduce(
+			(a, f) => f(a, config),
+			highlighter
+		);
 	});
 };

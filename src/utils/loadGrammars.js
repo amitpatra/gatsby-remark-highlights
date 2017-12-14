@@ -1,7 +1,12 @@
-module.exports = (highlighter, additionalLangs) => {
-	if (additionalLangs) {
+module.exports = (highlighter, config) => {
+	const langs = !!config.languagePackage ? config.languagePackage : config.additionalLangs;
+	if (typeof langs === 'string') {
+		highlighter.requireGrammarsSync({
+			modulePath: require.resolve(`${langs}/package.json`)
+		});
+	} else if (langs instanceof Array) {
 		// requireGrammarsSync calls loadGrammarsSync
-		additionalLangs.forEach(language => {
+		langs.forEach(language => {
 			highlighter.requireGrammarsSync({
 				modulePath: require.resolve(`${language}/package.json`)
 			});
@@ -11,4 +16,6 @@ module.exports = (highlighter, additionalLangs) => {
 		// highlightSync calls loadGrammarsSync under the hood, after scopeName is resolved so need to call manually
 		highlighter.loadGrammarsSync();
 	}
+
+	return highlighter;
 };
