@@ -17,26 +17,24 @@ module.exports = (nodeLang, pluginOptions) => {
 	let config = defaults(pluginOptions, defaultPluginOptions);
 
 	if (!!lang && lang.split(`{`).length > 1) {
-		let x = lang.substring(lang.indexOf(`(`) + 1);
-		let y = x.substring(0, x.indexOf(`)`));
+		const rangeStr = lang.substring(lang.indexOf(`(`) + 1, lang.indexOf(`)`));
 
-		let z = y.replace(`,`, `&`);
+		const modifiedRangeStr = rangeStr.replace(`,`, `&`).replace(` `, ``);
 
-		const newLang = lang.replace(y, z);
+		const modifiedLang = lang.replace(rangeStr, modifiedRangeStr);
 
-		const splitedLang = newLang.split(`{`);
-
-		const inlineConfig = newLang.substring(newLang.indexOf('{'));
+		const inlineConfig = modifiedLang.substring(modifiedLang.indexOf('{'));
 		const parsedConfig = parseConfig(inlineConfig)
 			.replace('(', `"`)
 			.replace(`)`, `"`);
 
 		config = Object.assign(config, JSON.parse(parsedConfig));
+
 		if (!!config.highlightLines) {
-			config.highlightLines = config.highlightLines.replace(`&`, `,`).replace(` `, ``);
+			config.highlightLines = config.highlightLines.replace(`&`, `,`);
 		}
-		console.log('Config is', config);
-		lang = splitedLang[0];
+
+		lang = modifiedLang.substring(0, modifiedLang.indexOf('{'));
 	}
 
 	config.lang = lang;

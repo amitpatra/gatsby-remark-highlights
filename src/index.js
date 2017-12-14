@@ -4,6 +4,7 @@ const highlightNode = require(`./utils/highlightNode`);
 const loadGrammars = require(`./utils/loadGrammars`);
 const wrapNode = require(`./utils/wrapNode`);
 const constructConfig = require(`./utils/constructConfig`);
+const highlightLines = require(`./utils/highlightLines`);
 
 module.exports = ({ markdownAST }, pluginOptions) => {
 	visit(markdownAST, `code`, node => {
@@ -14,7 +15,8 @@ module.exports = ({ markdownAST }, pluginOptions) => {
 		loadGrammars(highlighter, config);
 
 		const highlightedNode = highlightNode(highlighter, config, node.value);
-		const wrappedNode = wrapNode(highlightedNode, config);
+		const highlightedLinesNode = highlightLines(highlightedNode, config);
+		const wrappedNode = wrapNode(highlightedLinesNode, config);
 
 		node.type = `html`;
 		node.value = wrappedNode;

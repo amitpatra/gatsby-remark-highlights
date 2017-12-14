@@ -1,22 +1,5 @@
 const { defaults, includes } = require(`lodash`);
 const getIcon = require(`./getIcon`);
-const rangeParser = require(`parse-numeric-range`);
-
-const highlightLine = (node, highlightRange) =>
-	node
-		.split(`<div class="line">`)
-		.map((s, i) => {
-			if (i === 0) {
-				return s;
-			}
-
-			if (includes(highlightRange, i)) {
-				return `<div class="line highlighted-line">${s}`;
-			} else {
-				return `<div class="line">${s}`;
-			}
-		})
-		.join('');
 
 module.exports = (node, config) => {
 	let wrappedNode = node;
@@ -31,11 +14,6 @@ module.exports = (node, config) => {
 
 	if (!!codeWrap && !!showFileIcon) {
 		fileIconInSideCodeWrap = showFileIcon.insideCodeWrap;
-	}
-
-	if (!!config.highlightLines) {
-		const highlightRange = rangeParser.parse(config.highlightLines).filter(n => n > 0);
-		wrappedNode = highlightLine(wrappedNode, highlightRange);
 	}
 
 	if (!!showFileName && !!fileNameInSideCodeWrap) {
