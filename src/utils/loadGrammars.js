@@ -16,4 +16,6 @@ module.exports = (highlighter, config) => {
 		// highlightSync calls loadGrammarsSync under the hood, after scopeName is resolved so need to call manually
 		highlighter.loadGrammarsSync();
 	}
+
+	return highlighter;
 };

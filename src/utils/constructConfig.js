@@ -1,8 +1,8 @@
 const { defaults } = require(`lodash`);
 const parseConfig = require(`simple-string-to-json`);
 
-module.exports = (nodeLang, pluginOptions) => {
-	let lang = nodeLang;
+module.exports = (node, pluginOptions) => {
+	let lang = node.lang;
 
 	const defaultPluginOptions = {
 		additionalLangs: null,
@@ -38,5 +38,6 @@ module.exports = (nodeLang, pluginOptions) => {
 	}
 
 	config.lang = lang;
+	config.fileContents = node.value;
 	return config;
 };
