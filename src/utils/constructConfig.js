@@ -19,14 +19,14 @@ module.exports = (node, pluginOptions) => {
 	if (!!lang && lang.split(`{`).length > 1) {
 		const rangeStr = lang.substring(lang.indexOf(`(`) + 1, lang.indexOf(`)`));
 
-		const modifiedRangeStr = rangeStr.replace(`,`, `&`).replace(` `, ``);
+		const modifiedRangeStr = rangeStr.replace(`,`, `&`).replace(` `, ``); // We are doing this since `parseConfig` use `,` to split string, we dont want to split the config string
 
 		const modifiedLang = lang.replace(rangeStr, modifiedRangeStr);
 
 		const inlineConfig = modifiedLang.substring(modifiedLang.indexOf('{'));
 		const parsedConfig = parseConfig(inlineConfig)
 			.replace('(', `"`)
-			.replace(`)`, `"`);
+			.replace(`)`, `"`); // Necessary since we gonna run JSON.parse
 
 		config = Object.assign(config, JSON.parse(parsedConfig));
 
