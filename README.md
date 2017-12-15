@@ -54,8 +54,9 @@ To use this plugin you have to use a Atom theme. Atom themes are *less* files so
 
 ## Release History
 
+* 1.3.2 Fix for cases when grammar name is absent
 * 1.3.1 Fix line highlight bug
-* 1.3.0 Implement inline config, line highligh
+* 1.3.0 Implement inline config, line highlight
 * 1.2.0 Implement code wrapping
 * 1.1.5 Code reorganization
 * 1.1.4 Bug fix, highlight when no lang is provided
