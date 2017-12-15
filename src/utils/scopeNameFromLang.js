@@ -5,7 +5,7 @@ module.exports = (highlighter, lang) => {
 
 	const grammar = pickBy(
 		highlighter.registry.grammarsByScopeName,
-		(val, key) => val.name.toLowerCase() === lang
+		(val, key) => !!val.name && val.name.toLowerCase() === lang
 	);
 
 	if (Object.keys(grammar).length) {
