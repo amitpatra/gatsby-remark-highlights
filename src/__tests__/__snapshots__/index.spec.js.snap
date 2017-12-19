@@ -464,6 +464,47 @@ Object {
 }
 `;
 
+exports[`remark atom highlights plugin highlight when inline config is provided in single quote 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{scopePrefix: 'source--'}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 52,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source--source source--js\\"><span class=\\"source--comment source--line source--double-slash source--js\\"><span class=\\"source--punctuation source--definition source--comment source--js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 52,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`remark atom highlights plugin inline scopePrefix 1`] = `
 Object {
   "children": Array [
