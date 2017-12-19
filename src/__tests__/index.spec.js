@@ -134,4 +134,11 @@ describe(`remark atom highlights plugin`, () => {
 		plugin({ markdownAST });
 		expect(markdownAST).toMatchSnapshot();
 	});
+
+	it(`highlight when inline config is provided in single quote`, () => {
+		const code = `\`\`\`js{scopePrefix: 'source--'}\n// Atom Highlight\n\`\`\``;
+		const markdownAST = remark.parse(code);
+		plugin({ markdownAST });
+		expect(markdownAST).toMatchSnapshot();
+	});
 });

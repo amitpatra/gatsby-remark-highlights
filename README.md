@@ -54,6 +54,7 @@ To use this plugin you have to use a Atom theme. Atom themes are *less* files so
 
 ## Release History
 
+* 1.3.3 Enable single quote for inline configs
 * 1.3.2 Fix for cases when grammar name is absent
 * 1.3.1 Fix line highlight bug
 * 1.3.0 Implement inline config, line highlight
