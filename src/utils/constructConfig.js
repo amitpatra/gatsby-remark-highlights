@@ -1,20 +1,19 @@
 const { defaults } = require(`lodash`);
 const parseConfig = require(`simple-string-to-json`);
+const defaultPluginOptions = {
+	additionalLangs: null,
+	scopePrefix: null,
+	codeWrap: false,
+	showFileName: false, // File name is actually lang
+	showFileIcon: false,
+	preClass: false,
+	wrapAll: false
+};
 
 module.exports = (node, pluginOptions) => {
 	let lang = node.lang;
 
-	const defaultPluginOptions = {
-		additionalLangs: null,
-		scopePrefix: null,
-		codeWrap: false,
-		showFileName: false, // File name is actually lang
-		showFileIcon: false,
-		preClass: false,
-		wrapAll: false
-	};
-
-	let config = defaults({}, pluginOptions, defaultPluginOptions);
+	let config = defaults({ fileContents: node.value }, pluginOptions, defaultPluginOptions);
 
 	if (!!lang && lang.split(`{`).length > 1) {
 		lang = lang.replace(`'`, `"`);
@@ -35,7 +34,5 @@ module.exports = (node, pluginOptions) => {
 		lang = modifiedLang.substring(0, modifiedLang.indexOf('{'));
 	}
 
-	config.lang = lang;
-	config.fileContents = node.value;
-	return config;
+	return Object.assign(config, { lang });
 };
