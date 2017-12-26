@@ -246,7 +246,7 @@ Object {
 }
 `;
 
-exports[`remark atom highlights plugin highlight codes from addition langs 1`] = `
+exports[`remark atom highlights plugin highlight codes from addition langs from plugin config 1`] = `
 Object {
   "children": Array [
     Object {
@@ -287,7 +287,7 @@ Object {
 }
 `;
 
-exports[`remark atom highlights plugin highlight codes from addition langs when it provided along its name 1`] = `
+exports[`remark atom highlights plugin highlight codes from addition langs when passed in inline config 1`] = `
 Object {
   "children": Array [
     Object {
@@ -423,47 +423,6 @@ Object {
 }
 `;
 
-exports[`remark atom highlights plugin highlight codes from scope when scope is provided; it would try to use js even if rs is provided 2`] = `
-Object {
-  "children": Array [
-    Object {
-      "lang": "rs{languagePackage: \\"language-rust\\"}",
-      "position": Position {
-        "end": Object {
-          "column": 4,
-          "line": 3,
-          "offset": 61,
-        },
-        "indent": Array [
-          1,
-          1,
-        ],
-        "start": Object {
-          "column": 1,
-          "line": 1,
-          "offset": 0,
-        },
-      },
-      "type": "html",
-      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
-    },
-  ],
-  "position": Object {
-    "end": Object {
-      "column": 4,
-      "line": 3,
-      "offset": 61,
-    },
-    "start": Object {
-      "column": 1,
-      "line": 1,
-      "offset": 0,
-    },
-  },
-  "type": "root",
-}
-`;
-
 exports[`remark atom highlights plugin highlight when inline config is provided in single quote 1`] = `
 Object {
   "children": Array [
@@ -546,7 +505,48 @@ Object {
 }
 `;
 
-exports[`remark atom highlights plugin override scopePrefix 1`] = `
+exports[`remark atom highlights plugin loads grammars from inline config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "rs{languagePackage: \\"language-rust\\"}",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 61,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source rust\\"><span class=\\"comment line double-slash rust\\"><span>//</span><span>&nbsp;Atom&nbsp;Highlight</span></span></span></div></pre>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 61,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin override scopePrefix from config when inline config is provided 1`] = `
 Object {
   "children": Array [
     Object {
