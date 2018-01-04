@@ -104,7 +104,7 @@ Object {
         },
       },
       "type": "html",
-      "value": "<span class='highlighted-file-icon js-icon dark-yellow'></span><div class='highlight'><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre></div>",
+      "value": "<span class='highlighted-file-icon js-icon medium-yellow'></span><div class='highlight'><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre></div>",
     },
   ],
   "position": Object {
@@ -868,7 +868,7 @@ Object {
         },
       },
       "type": "html",
-      "value": "<span class='highlighted-file-icon js-icon dark-yellow'></span><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+      "value": "<span class='highlighted-file-icon js-icon medium-yellow'></span><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
     },
   ],
   "position": Object {

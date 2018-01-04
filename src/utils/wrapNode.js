@@ -23,7 +23,7 @@ module.exports = (node, config) => {
 
 	if (!!showFileIcon && !!fileIconInSideCodeWrap) {
 		const fileIconArray = getIcon(lang);
-		wrappedNode = `<span class='highlighted-file-icon ${fileIconArray[0]} ${fileIconArray[1][1]}'></span>${wrappedNode}`;
+		wrappedNode = `<span class='highlighted-file-icon ${fileIconArray[0]} ${fileIconArray[1]}'></span>${wrappedNode}`;
 	}
 
 	if (!!codeWrap) {
@@ -41,7 +41,7 @@ module.exports = (node, config) => {
 	if (!!showFileIcon && !fileIconInSideCodeWrap) {
 		const fileIconArray = getIcon(lang);
 		const fileIconName = fileIconArray[0];
-		const fileIconColor = fileIconArray[1][1];
+		const fileIconColor = fileIconArray[1];
 		wrappedNode = `<span class='highlighted-file-icon ${fileIconName} ${fileIconColor}'></span>${wrappedNode}`;
 	}
 
