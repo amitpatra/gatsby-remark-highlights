@@ -19,7 +19,7 @@ const getIcon = lang => {
 	if (!!icon) {
 		return icon;
 	}
-	return ['null-icon', ['medium-grey', 'medium-grey']];
+	return ['null-icon', 'medium-grey'];
 };
 
 module.exports = getIcon;

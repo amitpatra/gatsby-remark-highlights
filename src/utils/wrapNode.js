@@ -18,12 +18,12 @@ module.exports = (node, config) => {
 
 	if (!!showFileName && !!fileNameInSideCodeWrap) {
 		//Show the file name inside the codewrap
-		wrappedNode = `<div class='highlighted-file-name'>${lang}</div>${wrappedNode}`;
+		wrappedNode = `<span class='highlighted-file-name'>${lang}</span>${wrappedNode}`;
 	}
 
 	if (!!showFileIcon && !!fileIconInSideCodeWrap) {
 		const fileIconArray = getIcon(lang);
-		wrappedNode = `<div class='highlighted-file-icon ${fileIconArray[0]}'></div>${wrappedNode}`;
+		wrappedNode = `<span class='highlighted-file-icon ${fileIconArray[0]} ${fileIconArray[1]}'></span>${wrappedNode}`;
 	}
 
 	if (!!codeWrap) {
@@ -35,12 +35,14 @@ module.exports = (node, config) => {
 	}
 
 	if (!!showFileName && !fileNameInSideCodeWrap) {
-		wrappedNode = `<div class='highlighted-file-name'>${lang}</div>${wrappedNode}`;
+		wrappedNode = `<span class='highlighted-file-name'>${lang}</span>${wrappedNode}`;
 	}
 
 	if (!!showFileIcon && !fileIconInSideCodeWrap) {
 		const fileIconArray = getIcon(lang);
-		wrappedNode = `<div class='highlighted-file-icon ${fileIconArray[0]}'></div>${wrappedNode}`;
+		const fileIconName = fileIconArray[0];
+		const fileIconColor = fileIconArray[1];
+		wrappedNode = `<span class='highlighted-file-icon ${fileIconName} ${fileIconColor}'></span>${wrappedNode}`;
 	}
 
 	if (!!wrapAll) {

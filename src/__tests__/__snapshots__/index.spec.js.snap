@@ -82,6 +82,47 @@ Object {
 }
 `;
 
+exports[`remark atom highlights plugin has codewraps and fileicons when enabled in inline config 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{ codeWrap: true, showFileIcon: true  }",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 67,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<span class='highlighted-file-icon js-icon medium-yellow'></span><div class='highlight'><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre></div>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 67,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
 exports[`remark atom highlights plugin has codewraps when codewrapping is enabled 1`] = `
 Object {
   "children": Array [
@@ -112,6 +153,47 @@ Object {
       "column": 4,
       "line": 3,
       "offset": 28,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;
+
+exports[`remark atom highlights plugin has codewraps when inline codewrapping is enabled 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "lang": "js{ codeWrap: true }",
+      "position": Position {
+        "end": Object {
+          "column": 4,
+          "line": 3,
+          "offset": 46,
+        },
+        "indent": Array [
+          1,
+          1,
+        ],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "html",
+      "value": "<div class='highlight'><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlights</span></span></span></div></pre></div>",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 4,
+      "line": 3,
+      "offset": 46,
     },
     "start": Object {
       "column": 1,
@@ -786,7 +868,7 @@ Object {
         },
       },
       "type": "html",
-      "value": "<div class='highlighted-file-icon js-icon'></div><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+      "value": "<span class='highlighted-file-icon js-icon medium-yellow'></span><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
     },
   ],
   "position": Object {
@@ -827,7 +909,7 @@ Object {
         },
       },
       "type": "html",
-      "value": "<div class='highlighted-file-name'>js</div><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
+      "value": "<span class='highlighted-file-name'>js</span><pre class=\\"editor editor-colors\\"><div class=\\"line\\"><span class=\\"source js\\"><span class=\\"comment line double-slash js\\"><span class=\\"punctuation definition comment js\\"><span>//</span></span><span>&nbsp;Atom&nbsp;Highlight&nbsp;with&nbsp;fileName</span></span></span></div></pre>",
     },
   ],
   "position": Object {

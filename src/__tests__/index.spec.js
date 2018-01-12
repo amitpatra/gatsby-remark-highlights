@@ -68,6 +68,16 @@ describe(`remark atom highlights plugin`, () => {
 		runTestWithPluginOptions(code);
 	});
 
+	it(`has codewraps when inline codewrapping is enabled`, () => {
+		const code = `\`\`\`js{ codeWrap: true }\n// Atom Highlights\n\`\`\``;
+		runTestWithPluginOptions(code);
+	});
+
+	it(`has codewraps and fileicons when enabled in inline config`, () => {
+		const code = `\`\`\`js{ codeWrap: true, showFileIcon: true  }\n// Atom Highlights\n\`\`\``;
+		runTestWithPluginOptions(code);
+	});
+
 	it(`highlight codes from addition langs from plugin config`, () => {
 		const code = `\`\`\`rs\n// Atom Highlights\n\`\`\``;
 		const options = { additionalLangs: [`language-rust`] };

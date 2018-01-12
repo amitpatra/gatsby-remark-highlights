@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-highlights",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Adds syntax highlighting to code blocks at build time using Atom Highlights",
   "main": "index.js",
   "author": "Amit Patra <amit.patra@msn.com>",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "cross-env": "^5.1.1",
-    "jest": "^22.0.0",
+    "jest": "^21.0.0",
     "language-hugo": "mattstratton/language-hugo",
     "language-rust": "^0.4.12",
     "remark": "^8.0.0"
