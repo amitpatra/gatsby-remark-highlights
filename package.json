@@ -7,21 +7,28 @@
   "license": "MIT",
   "private": false,
   "repository": "git@github.com:amitpatra/gatsby-remark-highlights.git",
-  "keywords": ["gatsby", "gatsby-plugin", "highlight", "atom", "atom highlights", "remark"],
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "highlight",
+    "atom",
+    "atom highlights",
+    "remark"
+  ],
   "dependencies": {
     "highlights": "^3.1.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "parse-numeric-range": "^0.0.2",
     "simple-string-to-json": "^0.0.1",
-    "unist-util-visit": "^1.2.0"
+    "unist-util-visit": "^1.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "cross-env": "^5.1.1",
-    "jest": "^21.0.0",
+    "cross-env": "^5.2.0",
+    "jest": "^23.4.1",
     "language-hugo": "mattstratton/language-hugo",
     "language-rust": "^0.4.12",
-    "remark": "^8.0.0"
+    "remark": "^9.0.0"
   },
   "scripts": {
     "test": "jest .",
