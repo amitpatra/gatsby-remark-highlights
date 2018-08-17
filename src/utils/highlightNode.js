@@ -1,18 +1,22 @@
-const scopeNameFromLang = require(`./scopeNameFromLang`);
-let scopeName = '';
+const scopeNameFromLang = require('./scopeNameFromLang');
 
 module.exports = (highlighter, config) => {
-	let { lang, scopeName, fileContents } = config;
-	if (!!lang && (!!scopeName || !!(scopeName = scopeNameFromLang(highlighter, lang)))) {
-		// Check whether it is a language name
-		return highlighter.highlightSync({
-			fileContents,
-			scopeName
-		});
-	}
-	// Ok it is a file extension or a file
-	return highlighter.highlightSync({
-		fileContents,
-		filePath: `fake_file_.${lang}`
-	});
+  const { lang, fileContents } = config;
+  let { scopeName } = config;
+
+  /* eslint-disable */
+  if (!!lang && (!!scopeName || !!(scopeName = scopeNameFromLang(highlighter, lang)))) {
+    // Check whether it is a language name
+    return highlighter.highlightSync({
+      fileContents,
+      scopeName,
+    });
+  }
+  /* eslint-enable */
+
+  // Ok it is a file extension or a file
+  return highlighter.highlightSync({
+    fileContents,
+    filePath: `fake_file_.${lang}`,
+  });
 };
