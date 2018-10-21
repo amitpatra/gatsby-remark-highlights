@@ -32,7 +32,7 @@
     "jest": "^23.5.0",
     "language-hugo": "mattstratton/language-hugo",
     "language-rust": "^0.4.12",
-    "remark": "^9.0.0"
+    "remark": "^10.0.0"
   },
   "scripts": {
     "jest": "jest .",
