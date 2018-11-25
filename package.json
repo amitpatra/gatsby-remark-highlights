@@ -16,7 +16,7 @@
     "remark"
   ],
   "dependencies": {
-    "eslint-plugin-jest": "^21.21.0",
+    "eslint-plugin-jest": "^22.0.1",
     "highlights": "^3.1.1",
     "lodash": "^4.17.10",
     "parse-numeric-range": "^0.0.2",
